@@ -1,6 +1,6 @@
 <?php
 
-require_once('lib/ThreeScaleClient.php');
+require_once(dirname(__FILE__).'lib/ThreeScaleClient.php');
 
 $client =  new ThreeScaleClient("9062f7afd5a594f2e9882c34206eea67");
 
