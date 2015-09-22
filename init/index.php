@@ -1,5 +1,14 @@
 <?php
 
+
+require_once('/home/github_repo/php-plugin/sample-php/3scale_ws_api_for_php/lib/ThreeScaleClient.php');
+
+$client =  new ThreeScaleClient("9062f7afd5a594f2e9882c34206eea67");
+
+$response = $client->authrep_with_user_key('USER_KEY', array('hits' => 1));
+
+if($response->isSuccess()) {
+
 function get_app_list()
 {
   //normally this info would be pulled from a database.
@@ -21,6 +30,10 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
         $value = get_app_list();
         break;
     }
+}
+}
+else {
+  echo "Error: " . $response->getErrorMessage() . "\n";
 }
 
 //return JSON array
