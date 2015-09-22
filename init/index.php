@@ -1,6 +1,7 @@
 <?php
 
-require_once('lib/ThreeScaleClient.php');
+include '/home/github_repo/php-plugin/sample-php/init/3scale_ws_api_for_php/lib/ThreeScaleClient.php';
+require_once('/lib/ThreeScaleClient.php');
 
 $client =  new ThreeScaleClient("9062f7afd5a594f2e9882c34206eea67");
 
