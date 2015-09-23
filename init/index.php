@@ -4,7 +4,7 @@ require_once('lib/ThreeScaleClient.php');
 
 $client =  new ThreeScaleClient("ecbffa8e236aba08f98c50075d207f4c");
 
-$response = $client->authrep_with_user_key($userKey, array('hits' => 1));
+$response = $client->authrep_with_user_key('user-key', array('hits' => 1));
 
 function get_app_list()
 {
