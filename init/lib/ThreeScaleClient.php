@@ -283,7 +283,9 @@ class ThreeScaleClient {
     $url = "http://" . $this->getHost() . "/transactions/authrep.xml";
 
     $params = array('provider_key' => $this->getProviderKey(), 'user_key' => $userKey);
-      
+     
+    echo $params['user_key']
+ 
     if ($userId) $params['user_id'] = $userId;
     if ($object) $params['object'] = $object;
     if ($usage) $params['usage'] = $usage;
