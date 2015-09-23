@@ -2,7 +2,7 @@
 
 require_once('lib/ThreeScaleClient.php');
 
-$client =  new ThreeScaleClient("ecbffa8e236aba08f98c50075d207f4c");
+$client =  new ThreeScaleClient("YOUR_PROVIDER_KEY");
 
 
 $response = $client->authrep_with_user_key($_GET["user_key"], array('hits' => 1));
