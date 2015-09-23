@@ -284,7 +284,7 @@ class ThreeScaleClient {
 
     $params = array('provider_key' => $this->getProviderKey(), 'user_key' => $userKey);
      
-    echo $params['user_key']
+    echo $params['user_key'];
  
     if ($userId) $params['user_id'] = $userId;
     if ($object) $params['object'] = $object;
