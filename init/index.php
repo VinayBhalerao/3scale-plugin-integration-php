@@ -3,7 +3,7 @@
 require_once('lib/ThreeScaleClient.php');
 
 //$client =  new ThreeScaleClient("ecbffa8e236aba08f98c50075d207f4c");
-$GLOBALS['client'] = ThreeScaleClient("ecbffa8e236aba08f98c50075d207f4c");	
+$GLOBALS['client'] = 'ecbffa8e236aba08f98c50075d207f4c';	
 
 $response = $client->authorize_with_user_key($_GET["user_key"]);
 
