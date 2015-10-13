@@ -13,7 +13,7 @@ function get_app_list()
   //build JSON array
   
   //report against metric 
-  $response = $client->report(array(array('user_key' => $_GET["user_key"],'usage' => array('speaker' => 1))));
+  $response = $client->report(array(array('user_key' => 'ced4fe2a1db89ff08c3e75896b82ece6','usage' => array('speaker' => 1))));
 
   $app_list = array(array("id" => 1, "name" => "Web Demo"), array("id" => 2, "name" => "Audio Countdown"), array("id" => 3, "name" => "The Tab Key"), array("id" => 4, "name" => "Music Sleep Timer"));
 
