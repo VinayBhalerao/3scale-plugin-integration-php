@@ -13,7 +13,7 @@ function get_app_list()
   
   //report against metric 
   GLOBAL $client;
-   $client->report(array(array('user_key' => 'ab8be4a34e2662610d44aaf5350e0e76','usage' => array('speech' => 1))));
+   $client->report(array(array('user_key' => $_GET["user_key"],'usage' => array('speech' => 1))));
 
   $app_list = array(array("id" => 1, "name" => "Web Demo"), array("id" => 2, "name" => "Audio Countdown"), array("id" => 3, "name" => "The Tab Key"), array("id" => 4, "name" => "Music Sleep Timer"));
 
