@@ -2,7 +2,7 @@
 
 require_once('lib/ThreeScaleClient.php');
 
-$client =  new ThreeScaleClient("ecbffa8e236aba08f98c50075d207f4c");
+$client =  new ThreeScaleClient("YOUR_PROVIDER_KEY");
 
 $response = $client->authorize_with_user_key($_GET["user_key"]);
 
@@ -27,7 +27,7 @@ function enroll_app_list()
 
   //report against metric 
   GLOBAL $client;
-   $client->report(array(array('user_key' => '$_GET["user_key"]','usage' => array('enroll' => 1))));
+  $client->report(array(array('user_key' => '$_GET["user_key"]','usage' => array('enroll' => 1))));
 
   $app_list = array(array("id" => 1, "name" => "Enroll abc"), array("id" => 2, "name" => "Enroll efg"), array("id" => 3, "name" => "Enroll mnp"), array("id" => 4, "name" => "Enroll xyz"));
 
