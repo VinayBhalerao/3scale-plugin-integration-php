@@ -13,7 +13,7 @@ function get_app_list()
   
   //report against metric 
   GLOBAL $client;
-   $client->report(array(array('user_key' => 'ced4fe2a1db89ff08c3e75896b82ece6','usage' => array('speech' => 1))));
+   $client->report(array(array('user_key' => 'ab8be4a34e2662610d44aaf5350e0e76','usage' => array('speech' => 1))));
 
   $app_list = array(array("id" => 1, "name" => "Web Demo"), array("id" => 2, "name" => "Audio Countdown"), array("id" => 3, "name" => "The Tab Key"), array("id" => 4, "name" => "Music Sleep Timer"));
 
@@ -27,7 +27,7 @@ function enroll_app_list()
 
   //report against metric 
   GLOBAL $client;
-   $client->report(array(array('user_key' => 'ced4fe2a1db89ff08c3e75896b82ece6','usage' => array('enroll' => 1))));
+   $client->report(array(array('user_key' => 'ab8be4a34e2662610d44aaf5350e0e76','usage' => array('enroll' => 1))));
 
   $app_list = array(array("id" => 1, "name" => "Enroll abc"), array("id" => 2, "name" => "Enroll efg"), array("id" => 3, "name" => "Enroll mnp"), array("id" => 4, "name" => "Enroll xyz"));
 
@@ -47,6 +47,7 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
     {
       case "get_app_list":
         $value = get_app_list();
+        break;
 
       case "enroll_app_list":
         $value = enroll_app_list();
