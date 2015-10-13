@@ -27,7 +27,7 @@ function enroll_app_list()
 
   //report against metric 
   GLOBAL $client;
-   $client->report(array(array('user_key' => 'ab8be4a34e2662610d44aaf5350e0e76','usage' => array('enroll' => 1))));
+   $client->report(array(array('user_key' => '$_GET["user_key"]','usage' => array('enroll' => 1))));
 
   $app_list = array(array("id" => 1, "name" => "Enroll abc"), array("id" => 2, "name" => "Enroll efg"), array("id" => 3, "name" => "Enroll mnp"), array("id" => 4, "name" => "Enroll xyz"));
 
