@@ -20,6 +20,20 @@ function get_app_list()
   return $app_list;
 }
 
+function enroll_app_list()
+{
+  //normally this info would be pulled from a database.
+  //build JSON array
+
+  //report against metric 
+  GLOBAL $client;
+   $client->report(array(array('user_key' => 'ced4fe2a1db89ff08c3e75896b82ece6','usage' => array('enroll' => 1))));
+
+  $app_list = array(array("id" => 1, "name" => "Enroll abc"), array("id" => 2, "name" => "Enroll efg"), array("id" => 3, "name" => "Enroll mnp"), array("id" => 4, "name" => "Enroll xyz"));
+
+  return $app_list;
+}
+
 if($response->isSuccess()) {
 
 
@@ -33,6 +47,9 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
     {
       case "get_app_list":
         $value = get_app_list();
+
+      case "enroll_app_list":
+        $value = enroll_app_list();
         break;
     }
  }
