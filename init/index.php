@@ -37,7 +37,7 @@ function enroll_app_list()
 if($response->isSuccess()) {
 
 
-$possible_url = array("get_app_list");
+$possible_url = array("speech_list","enroll_list");
 
 $value = "An error has occurred";
 
@@ -45,11 +45,11 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
  {
   switch ($_GET["action"])
     {
-      case "get_app_list":
+      case "speech_list":
         $value = get_app_list();
         break;
 
-      case "enroll_app_list":
+      case "enroll_list":
         $value = enroll_app_list();
         break;
     }
