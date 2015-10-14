@@ -47,10 +47,12 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
     {
       case "speech_list":
         $value = get_app_list();
+        print "In speech_list";
         break;
 
       case "enroll_list":
         $value = enroll_app_list();
+        print "In enroll list";
         break;
     }
  }
