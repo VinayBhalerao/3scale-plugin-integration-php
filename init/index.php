@@ -6,7 +6,7 @@ $client =  new ThreeScaleClient("YOUR_PROVIDER_KEY");
 
 $response = $client->authorize_with_user_key($_GET["user_key"]);
 
-function get_app_list()
+function speech_app_list()
 {
   //normally this info would be pulled from a database.
   //build JSON array
@@ -46,7 +46,7 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
   switch ($_GET["action"])
     {
       case "speech_list":
-        $value = get_app_list();
+        $value = speech_app_list();
         break;
 
       case "enroll_list":
